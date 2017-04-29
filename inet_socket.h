@@ -1,3 +1,6 @@
+#ifndef DEF_INET_SOCKET
+#define DEF_INET_SOCKET
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,3 +18,5 @@ int connect_inet(int fd,char* ip,short port);
 char* get_ip_by_name(char* name);
 int send_string(int sockfd, unsigned char *buffer);
 char* recv_line(int sockfd);
+
+#endif
