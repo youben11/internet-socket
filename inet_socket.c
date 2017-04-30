@@ -60,7 +60,9 @@ int set_sockaddr_in(struct sockaddr_in *addr,char* ip,short port){
 	Wait for an incoming connexion to the socket described by the file descriptor (fd)
 	write information about the incoming connexion on addr struct
 	bind() and listen() must be called before
-	return a file descriptor of the new connexion or 0 on failure
+	return a file descriptor of the new connexion
+	
+	important: it wait until a valid connexion is set
 */
 int wait_and_accept(int fd,struct sockaddr *addr,socklen_t *len){
 	int new_fd=-1;
